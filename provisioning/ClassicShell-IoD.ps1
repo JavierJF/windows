@@ -8,13 +8,17 @@ $VerbosePreference = "continue"
 
 $chocolatey = "$env:ChocolateyInstall\bin\choco.exe" -f $env:SystemDrive
 $classicShellVers = "4.3.0.0"
+$classicShellDir = "C:\Program Files\Classic Shell\"
 $classicShellPath = "C:\Program Files\Classic Shell\ClassicStartMenu.exe"
 $classicShellProcessName = "ClassicStartMenu"
+$classicShellStopScript = Join-Path $(Split-Path -Parent $MyInvocation.MyCommand.Path) "ClassicShellStop.ps1"
 
 try
 {
     <# Classic-Shell installation #>
     Invoke-Command $chocolatey "install classic-shell --version $($classicShellVers) -y" "" 0
+    <# Install the required script to start stop classic-shell #>
+    Copy-Item $classicShellStopScript $classicShellDir
 }
 catch
 {
