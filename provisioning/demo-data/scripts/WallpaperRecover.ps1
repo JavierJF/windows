@@ -1,4 +1,4 @@
-<# 
+<#
     This scripts recover the previous wallpaper, after setting a
     new one.
 #>
@@ -35,6 +35,6 @@ if (!(Test-Path $backedPath)) {
 }
 
 $backedWp = Get-Content $backedPath
-[wallpaper]::SetWallpaper($backedWp) 
+[wallpaper]::SetWallpaper($backedWp)
 
 Remove-Item -Path $backedPath

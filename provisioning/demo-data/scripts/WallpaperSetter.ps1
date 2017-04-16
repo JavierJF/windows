@@ -37,4 +37,4 @@ if (Test-Path $backedPath) {
 }
 
 Write-Verbose ("The path: " + $nWPath)
-[wallpaper]::SetWallpaper($nWPath) 
+[wallpaper]::SetWallpaper($nWPath)

@@ -98,7 +98,7 @@ function stopClassicShell() {
     {
         <# Currently there is no way of being sure classicShell has exit #>
         $process = Get-Process $ClassicShellProcessName -ea SilentlyContinue
-    
+
         if ($process)
         {
             Invoke-Command $classicShellPath "-exit" "" 0
