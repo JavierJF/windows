@@ -15,7 +15,7 @@
         "string-argv": "0.0.2",
         "@pokusew/pcsclite": "0.4.18",
         "grunt-shell": "1.3.0",
-        "gpii-universal": "JavierJF/universal#GPII-2521"
+        "gpii-universal": "JavierJF/universal#GPII-2521+2578"
     },
     "devDependencies": {
         "grunt": "1.0.2",
